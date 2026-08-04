@@ -1,1 +1,240 @@
+/* ==========================================
+   EZEE VISION CHAMPUA
+   Premium UI Theme - Part 1A
+========================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --bg:#070B1A;
+    --bg2:#111B3B;
+
+    --primary:#4F46E5;
+    --secondary:#06B6D4;
+    --gold:#FBBF24;
+
+    --white:#ffffff;
+    --text:#D9E3FF;
+    --gray:#A6B3D1;
+
+    --glass:rgba(255,255,255,.08);
+    --border:rgba(255,255,255,.15);
+
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:var(--white);
+
+    background:
+    radial-gradient(circle at top left,#4F46E520 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#06B6D420 0%,transparent 40%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0b1024;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+    var(--primary),
+    var(--secondary));
+
+    border-radius:20px;
+}
+
+/* Animated Background */
+
+.bg-animation{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.bg-animation span{
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    animation:float 18s linear infinite;
+
+    opacity:.35;
+
+}
+
+.bg-animation span:nth-child(1){
+
+    background:#4F46E5;
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+.bg-animation span:nth-child(2){
+
+    background:#06B6D4;
+
+    right:-120px;
+
+    top:20%;
+
+}
+
+.bg-animation span:nth-child(3){
+
+    background:#FBBF24;
+
+    bottom:-120px;
+
+    left:15%;
+
+}
+
+.bg-animation span:nth-child(4){
+
+    background:#7C3AED;
+
+    bottom:10%;
+
+    right:15%;
+
+}
+
+.bg-animation span:nth-child(5){
+
+    background:#22C55E;
+
+    top:45%;
+
+    left:45%;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-80px)
+        scale(1.2);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 8%;
+
+    position:relative;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:900px;
+
+    backdrop-filter:blur(18px);
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+    padding:60px 40px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* Badge */
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#FFD166;
+
+    margin-bottom:20px;
+
+    font-size:.9rem;
+
+    letter-spacing:.5px;
+
+}
