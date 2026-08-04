@@ -238,3 +238,272 @@ body{
     letter-spacing:.5px;
 
 }
+/*=========================================
+        HERO TITLE
+=========================================*/
+
+.hero h1{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:15px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero h1 span{
+
+    background:linear-gradient(
+    90deg,
+    #FFD700,
+    #FF8C00,
+    #FFD700);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    background-size:300%;
+
+    animation:goldFlow 5s linear infinite;
+
+}
+
+.hero h2{
+
+    font-size:30px;
+
+    font-weight:600;
+
+    color:#BFD8FF;
+
+    margin-bottom:20px;
+
+    animation:fadeUp 1.3s ease;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    color:#D8D8D8;
+
+    line-height:1.8;
+
+    max-width:720px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    animation:fadeUp 1.5s ease;
+
+}
+
+/*=========================================
+        SEARCH BOX
+=========================================*/
+
+.hero-search{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:40px;
+
+}
+
+.hero-search input{
+
+    width:420px;
+
+    max-width:95%;
+
+    padding:16px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+.hero-search input::placeholder{
+
+    color:#d5d5d5;
+
+}
+
+.hero-search input:focus{
+
+    border-color:#FFD700;
+
+    box-shadow:0 0 20px rgba(255,215,0,.35);
+
+}
+
+.hero-search button{
+
+    padding:16px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    color:#fff;
+
+    background:linear-gradient(
+    135deg,
+    #4F46E5,
+    #06B6D4);
+
+    transition:.35s;
+
+}
+
+.hero-search button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(79,70,229,.35);
+
+}
+
+/*=========================================
+        BUTTONS
+=========================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+}
+
+.primary-btn{
+
+    color:#000;
+
+    background:linear-gradient(
+    135deg,
+    #FFD700,
+    #FFB400);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 40px rgba(255,215,0,.35);
+
+}
+
+.secondary-btn{
+
+    color:#fff;
+
+    border:2px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.secondary-btn:hover{
+
+    background:#ffffff;
+
+    color:#111827;
+
+}
+
+/*=========================================
+        ANIMATIONS
+=========================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes goldFlow{
+
+    0%{
+
+        background-position:0%;
+
+    }
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
