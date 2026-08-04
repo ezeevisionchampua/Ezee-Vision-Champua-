@@ -873,3 +873,22 @@ font-size:18px;
 cursor:pointer;
 
 }
+.theme-btn{
+
+width:42px;
+
+height:42px;
+
+border:none;
+
+background:#1B2855;
+
+color:white;
+
+border-radius:12px;
+
+margin-right:10px;
+
+cursor:pointer;
+
+}
