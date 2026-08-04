@@ -892,3 +892,32 @@ margin-right:10px;
 cursor:pointer;
 
 }
+.light-mode{
+
+background:#f4f7ff;
+
+color:#111;
+
+}
+
+.light-mode .navbar,
+
+.light-mode .subject-card,
+
+.light-mode .resource-card,
+
+.light-mode .founder-card,
+
+.light-mode .notice-card,
+
+.light-mode .footer,
+
+.light-mode .stat-box,
+
+.light-mode .search-wrapper{
+
+background:white;
+
+color:#111;
+
+}
