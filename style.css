@@ -583,17 +583,25 @@ margin:20px 0;
 
 }
 
+.founder-img,
 .founder-footer img{
 
-width:55px;
-
-height:55px;
+width:75px;
+height:75px;
 
 border-radius:50%;
 
 object-fit:cover;
 
-border:2px solid #4F46E5;
+object-position:center top;
+
+display:block;
+
+overflow:hidden;
+
+background:#111B3B;
+
+border:3px solid #4F46E5;
 
 }
 
