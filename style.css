@@ -1126,3 +1126,156 @@ transform:translateY(0);
 }
 
 }
+/*=========================================
+        LOADER
+=========================================*/
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#070B1A;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    transition:.6s;
+}
+
+.loader-circle{
+    width:90px;
+    height:90px;
+    border:6px solid rgba(255,255,255,.1);
+    border-top:6px solid #FFD700;
+    border-radius:50%;
+    animation:spinLoader 1s linear infinite;
+}
+
+@keyframes spinLoader{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/*=========================================
+        BACK TO TOP
+=========================================*/
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#4F46E5,#06B6D4);
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 12px 30px rgba(79,70,229,.35);
+
+    transition:.35s;
+
+}
+
+#topBtn:hover{
+
+    transform:translateY(-6px) scale(1.08);
+
+}
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================================
+        MOUSE GLOW
+=========================================*/
+
+.cursor-glow{
+
+    position:fixed;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:radial-gradient(circle,
+    rgba(79,70,229,.18),
+    transparent 70%);
+
+    transform:translate(-50%,-50%);
+
+    z-index:-1;
+
+    transition:.08s linear;
+
+}
+
+/*=========================================
+        PAGE FADE
+=========================================*/
+
+body{
+
+    animation:pageLoad .8s ease;
+
+}
+
+@keyframes pageLoad{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
