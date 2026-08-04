@@ -424,21 +424,23 @@ padding:15px;
 
 background:#111B3B;
 
-border-radius:18px;
+padding:20px;
 
-padding:18px;
+border-radius:22px;
 
 margin-bottom:18px;
 
 border:1px solid rgba(255,255,255,.05);
 
-transition:.25s;
+transition:.3s;
 
 }
 
 .resource-card:hover{
 
-transform:translateY(-3px);
+transform:translateY(-4px);
+
+border-color:#06B6D4;
 
 }
 
