@@ -830,3 +830,299 @@ text-align:center;
 }
 
 }
+/*=========================================
+        PREMIUM NAVBAR
+=========================================*/
+
+nav{
+
+    position:fixed;
+
+    top:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:92%;
+    max-width:1300px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 28px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    z-index:9999;
+
+    transition:.4s;
+
+}
+
+nav.scrolled{
+
+    top:10px;
+
+    background:rgba(8,12,30,.92);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/*=========================================
+            LOGO
+=========================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+.logo i{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#4F46E5,#06B6D4);
+
+    box-shadow:0 0 25px rgba(79,70,229,.45);
+
+    animation:logoPulse 4s infinite;
+
+}
+
+/*=========================================
+          NAV LINKS
+=========================================*/
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+nav ul li a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+    90deg,
+    #FFD700,
+    #06B6D4);
+
+    transition:.4s;
+
+}
+
+nav ul li a:hover{
+
+    color:#FFD700;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/*=========================================
+        LOGIN BUTTON
+=========================================*/
+
+.nav-login{
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    135deg,
+    #FFD700,
+    #FFB800);
+
+    color:#000;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.nav-login:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(255,215,0,.35);
+
+}
+
+/*=========================================
+        MOBILE MENU
+=========================================*/
+
+.menu{
+
+    display:none;
+
+    font-size:28px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+@media(max-width:900px){
+
+nav{
+
+padding:15px 22px;
+
+}
+
+nav ul{
+
+display:none;
+
+position:absolute;
+
+top:82px;
+
+left:0;
+
+width:100%;
+
+background:#111B3B;
+
+border-radius:18px;
+
+padding:25px;
+
+flex-direction:column;
+
+text-align:center;
+
+gap:20px;
+
+}
+
+nav ul.active{
+
+display:flex;
+
+animation:menuShow .4s;
+
+}
+
+.menu{
+
+display:block;
+
+}
+
+.nav-login{
+
+display:none;
+
+}
+
+}
+
+/*=========================================
+            ANIMATION
+=========================================*/
+
+@keyframes logoPulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+}
+
+@keyframes menuShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
