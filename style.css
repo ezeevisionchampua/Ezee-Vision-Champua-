@@ -3,14 +3,11 @@
    Premium UI Theme - Part 1A
 ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 :root{
 
     --bg:#070B1A;
     --bg2:#111B3B;
-
-    --primary:#4F46E5;
+    --primary:#4F46E;
     --secondary:#06B6D4;
     --gold:#FBBF24;
 
@@ -1808,55 +1805,7 @@ transition:.3s;
 color:#FFD700;
 
 }
-/*=========================
-        STATS
-=========================*/
 
-.stats{
-
-padding:90px 8%;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-}
-
-.stat-box{
-
-padding:35px;
-
-text-align:center;
-
-border-radius:20px;
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.12);
-
-transition:.4s;
-
-}
-
-.stat-box:hover{
-
-transform:translateY(-10px);
-
-}
-
-.stat-box h2{
-
-font-size:50px;
-
-color:#FFD700;
-
-margin-bottom:10px;
-
-}
 
 /*=========================
       WHATSAPP
