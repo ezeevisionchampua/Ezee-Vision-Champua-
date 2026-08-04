@@ -48,3 +48,30 @@ themeBtn?.addEventListener("click",()=>{
 document.body.classList.toggle("light-mode");
 
 });
+/* Floating Button */
+
+document.getElementById("fabBtn")?.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+/* Chips */
+
+document.querySelectorAll(".chip").forEach(chip=>{
+
+chip.onclick=()=>{
+
+document.querySelector(".chip.active")?.classList.remove("active");
+
+chip.classList.add("active");
+
+};
+
+});
