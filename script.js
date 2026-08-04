@@ -98,3 +98,50 @@ box.classList.add("active");
 });
 
 });
+/*=========================
+      COUNTER
+=========================*/
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+
+let start=0;
+
+const end=+counter.dataset.target;
+
+const speed=end/80;
+
+const update=()=>{
+
+start+=speed;
+
+if(start<end){
+
+counter.innerHTML=Math.floor(start);
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerHTML=end+"+";
+
+}
+
+}
+
+update();
+
+});
+
+/*=========================
+      DARK MODE
+=========================*/
+
+const theme=document.getElementById("themeToggle");
+
+theme.onclick=()=>{
+
+document.body.classList.toggle("light-mode");
+
+};
