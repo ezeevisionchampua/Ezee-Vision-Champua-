@@ -1034,3 +1034,48 @@ body{
 padding-bottom:90px;
 
 }
+/* ===== CATEGORY CHIPS ===== */
+
+.chips{
+
+display:flex;
+
+gap:10px;
+
+overflow-x:auto;
+
+padding:0 15px 10px;
+
+scrollbar-width:none;
+
+}
+
+.chips::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.chip{
+
+border:none;
+
+padding:10px 16px;
+
+border-radius:30px;
+
+background:#111B3B;
+
+color:#fff;
+
+white-space:nowrap;
+
+cursor:pointer;
+
+}
+
+.chip.active{
+
+background:#4F46E5;
+
+}
