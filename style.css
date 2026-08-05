@@ -1215,3 +1215,30 @@ gap:8px;
 flex-wrap:wrap;
 
 }
+.empty-state{
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#111B3B;
+
+border-radius:20px;
+
+margin:20px 15px;
+
+}
+
+.empty-state h3{
+
+margin-bottom:10px;
+
+font-size:22px;
+
+}
+
+.empty-state p{
+
+color:#D9E3FF;
+
+}
