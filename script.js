@@ -236,3 +236,28 @@ return;
 }
 
 loadResources();
+document.querySelectorAll(".tab").forEach(tab=>{
+
+tab.onclick=()=>{
+
+document.querySelector(".tab.active")?.classList.remove("active");
+
+tab.classList.add("active");
+
+const category=tab.dataset.category;
+
+if(category==="all"){
+
+renderResources(allResources);
+
+return;
+
+}
+
+const filtered=allResources.filter(item=>item.category===category);
+
+renderResources(filtered);
+
+};
+
+});
