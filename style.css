@@ -42,13 +42,6 @@ text-align:center;
 
 }
 
-.logo{
-
-width:90px;
-height:90px;
-object-fit:contain;
-margin-bottom:15px;
-
 }
 
 .header h1{
@@ -260,8 +253,7 @@ display:block;
 
 }
 
-.mobile-menu a{
-
+.mobile-menu.show{
 display:block;
 
 padding:14px 0;
@@ -732,26 +724,6 @@ margin-bottom:18px;
 
 }
 
-.header h1{
-
-font-size:30px;
-
-font-weight:800;
-
-line-height:1.2;
-
-margin-bottom:12px;
-
-}
-
-.header p{
-
-font-size:17px;
-
-color:#d9e3ff;
-
-margin-bottom:25px;
-
 }
 
 .hero-buttons{
@@ -1019,6 +991,22 @@ z-index:999;
 
 transition:.3s;
 
+  .fab{
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+.fab.show{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+  
 }
 
 .fab:hover{
