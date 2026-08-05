@@ -1141,25 +1141,33 @@ display:none;
 
 .tab{
 
-border:none;
+padding:11px 18px;
 
-padding:12px 18px;
+border:none;
 
 border-radius:30px;
 
 background:#111B3B;
 
-color:white;
+color:#fff;
 
-white-space:nowrap;
+font-weight:500;
 
 cursor:pointer;
+
+transition:.25s;
+
+white-space:nowrap;
 
 }
 
 .tab.active{
 
 background:#4F46E5;
+
+color:#fff;
+
+box-shadow:0 8px 20px rgba(79,70,229,.25);
 
 }
 
