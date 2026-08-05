@@ -1206,3 +1206,12 @@ font-size:13px;
 color:#D9E3FF;
 
 }
+.resource-actions{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
