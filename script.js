@@ -112,7 +112,10 @@ async function loadResources() {
 
     container.innerHTML = "";
 
-    const filtered = resources.filter(item => item.subject === currentSubject);
+    allResources = resources.filter(item => item.subject === currentSubject);
+
+renderResources(allResources);
+return;
 
     if(filtered.length===0){
 
