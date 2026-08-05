@@ -75,3 +75,62 @@ chip.classList.add("active");
 };
 
 });
+async function loadResources(){
+
+const response=await fetch("data/resources.json");
+
+const resources=await response.json();
+
+const container=document.getElementById("resourceList");
+
+if(!container)return;
+
+container.innerHTML="";
+
+resources.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="resource-item">
+
+<div>
+
+<h3>${item.title}</h3>
+
+<p>${item.description}</p>
+
+</div>
+
+<div class="resource-actions">
+
+<a href="${item.view}"
+
+target="_blank"
+
+class="view-btn">
+
+View
+
+</a>
+
+<a href="${item.download}"
+
+target="_blank"
+
+class="download-btn">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+loadResources();
