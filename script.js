@@ -1,3 +1,4 @@
+let allResources = [];
 console.log("EZEE VISION CHAMPUA Loaded");
 const search = document.getElementById("searchInput");
 
