@@ -76,7 +76,69 @@ chip.classList.add("active");
 };
 
 });
-async function loadResources() {
+async function loadResources() 
+function renderResources(list){
+
+const container=document.getElementById("resourceList");
+
+container.innerHTML="";
+
+if(list.length===0){
+
+container.innerHTML=`
+
+<div class="empty-state">
+
+<h3>No Resources Found</h3>
+
+<p>No resources available in this category.</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+list.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="resource-item">
+
+<div>
+
+<h3>${item.title}</h3>
+
+<p>${item.description}</p>
+
+</div>
+
+<div class="resource-actions">
+
+<a href="${item.view}" target="_blank" class="view-btn">
+
+View
+
+</a>
+
+<a href="${item.download}" target="_blank" class="download-btn">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+{
 
     const params = new URLSearchParams(window.location.search);
 
