@@ -75,61 +75,97 @@ chip.classList.add("active");
 };
 
 });
-async function loadResources(){
+async function loadResources() {
 
-const response=await fetch("data/resources.json");
+    const params = new URLSearchParams(window.location.search);
 
-const resources=await response.json();
+    const currentSubject = params.get("subject") || "maths";
 
-const container=document.getElementById("resourceList");
+    const subjectTitle = document.getElementById("subjectTitle");
 
-if(!container)return;
+    const names = {
 
-container.innerHTML="";
+        maths: "Mathematics",
 
-resources.forEach(item=>{
+        science: "Science",
 
-container.innerHTML+=`
+        sst: "Social Science",
 
-<div class="resource-item">
+        english: "English"
 
-<div>
+    };
 
-<h3>${item.title}</h3>
+    if(subjectTitle){
 
-<p>${item.description}</p>
+        subjectTitle.textContent = names[currentSubject];
 
-</div>
+    }
 
-<div class="resource-actions">
+    const response = await fetch("data/resources.json");
 
-<a href="${item.view}"
+    const resources = await response.json();
 
-target="_blank"
+    const container = document.getElementById("resourceList");
 
-class="view-btn">
+    if(!container) return;
 
-View
+    container.innerHTML = "";
 
-</a>
+    const filtered = resources.filter(item => item.subject === currentSubject);
 
-<a href="${item.download}"
+    if(filtered.length===0){
 
-target="_blank"
+        container.innerHTML = `
 
-class="download-btn">
+        <div class="empty-state">
 
-Download
+            <h3>No Resources Found</h3>
 
-</a>
+            <p>Resources will be added soon.</p>
 
-</div>
+        </div>
 
-</div>
+        `;
 
-`;
+        return;
 
-});
+    }
+
+    filtered.forEach(item=>{
+
+        container.innerHTML += `
+
+        <div class="resource-item">
+
+            <div>
+
+                <h3>${item.title}</h3>
+
+                <p>${item.description}</p>
+
+            </div>
+
+            <div class="resource-actions">
+
+                <a href="${item.view}" target="_blank" class="view-btn">
+
+                View
+
+                </a>
+
+                <a href="${item.download}" target="_blank" class="download-btn">
+
+                Download
+
+                </a>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
 
 }
 
