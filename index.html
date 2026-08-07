@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b1020"
+    >
+
+    <title>EZEE VISION CHAMPUA | AI Notes Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         APP HEADER
+    ====================================================== -->
+
+    <header class="app-header">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                EV
+            </div>
+
+            <div class="brand-info">
+
+                <h1>EZEE VISION CHAMPUA</h1>
+
+                <span>AI Learning Studio</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <button
+                class="header-btn"
+                type="button"
+                title="Settings"
+            >
+                ⚙
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-container">
+
+
+        <!-- HERO SECTION -->
+
+        <section class="hero-section">
+
+            <div class="hero-badge">
+                ✦ AI POWERED LEARNING
+            </div>
+
+            <h2>
+                Turn Your Study Material
+                <span>Into Premium Learning Content</span>
+            </h2>
+
+            <p>
+                Upload your study material and create
+                professional notes, worksheets,
+                question papers and more.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             UPLOAD CARD
+        ================================================== -->
+
+        <section class="upload-section">
+
+            <div class="upload-card">
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <h3>
+                    Upload Your Study Material
+                </h3>
+
+                <p>
+                    PDF, DOCX, PPT or image files
+                </p>
+
+                <button
+                    class="primary-btn"
+                    type="button"
+                    id="uploadButton"
+                >
+                    Choose File
+                </button>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    hidden
+                    accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png"
+                >
+
+                <div
+                    class="upload-status"
+                    id="uploadStatus"
+                >
+                    No file selected
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTENT TYPES
+        ================================================== -->
+
+        <section class="content-section">
+
+            <div class="section-heading">
+
+                <span>CREATE</span>
+
+                <h3>
+                    Choose What You Want
+                </h3>
+
+            </div>
+
+
+            <div class="content-grid">
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="notes"
+                >
+
+                    <div class="card-icon">
+                        📚
+                    </div>
+
+                    <div>
+                        <h4>Complete Notes</h4>
+
+                        <p>
+                            Detailed chapter notes
+                        </p>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="short-notes"
+                >
+
+                    <div class="card-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+                        <h4>Premium Short Notes</h4>
+
+                        <p>
+                            Quick revision material
+                        </p>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="worksheet"
+                >
+
+                    <div class="card-icon">
+                        📝
+                    </div>
+
+                    <div>
+                        <h4>Worksheet</h4>
+
+                        <p>
+                            Practice questions
+                        </p>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="mcq"
+                >
+
+                    <div class="card-icon">
+                        ❓
+                    </div>
+
+                    <div>
+                        <h4>MCQ Questions</h4>
+
+                        <p>
+                            Objective practice
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="important"
+                >
+
+                    <div class="card-icon">
+                        🎯
+                    </div>
+
+                    <div>
+                        <h4>Important Questions</h4>
+
+                        <p>
+                            Exam-focused questions
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="content-card"
+                    type="button"
+                    data-type="revision"
+                >
+
+                    <div class="card-icon">
+                        🔖
+                    </div>
+
+                    <div>
+                        <h4>Revision Sheet</h4>
+
+                        <p>
+                            Fast exam revision
+                        </p>
+
+                    </div>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BRANDING PREVIEW
+        ================================================== -->
+
+        <section class="branding-preview">
+
+            <div class="preview-label">
+                YOUR GENERATED MATERIAL
+            </div>
+
+
+            <div class="document-preview">
+
+                <div class="document-header">
+
+                    <div class="document-logo">
+                        EV
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            EZEE VISION CHAMPUA
+                        </h3>
+
+                        <span>
+                            Premium Learning Material
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="document-body">
+
+                    <div class="placeholder-line large"></div>
+
+                    <div class="placeholder-line"></div>
+
+                    <div class="placeholder-line"></div>
+
+                    <div class="placeholder-line short"></div>
+
+                </div>
+
+
+                <div class="document-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                    >
+                        🖨 Print
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                    >
+                        📥 Download
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="app-footer">
+
+        <p>
+            © 2026 EZEE VISION CHAMPUA
+            Made With ❤️ By Shahid Sir 
+        </p>
+
+        <span>
+            AI Learning Studio
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
