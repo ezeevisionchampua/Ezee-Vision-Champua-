@@ -92,52 +92,118 @@
 
         </section>
 
+<!-- =================================================
+     SMART FILE UPLOAD
+================================================== -->
 
-        <!-- =================================================
-             UPLOAD CARD
-        ================================================== -->
+<section class="upload-section">
 
-        <section class="upload-section">
+    <div
+        class="upload-card"
+        id="uploadCard"
+    >
 
-            <div class="upload-card">
+        <div class="upload-icon" id="uploadIcon">
+            ↑
+        </div>
 
-                <div class="upload-icon">
-                    ↑
-                </div>
+        <h3 id="uploadTitle">
+            Upload Your Study Material
+        </h3>
 
-                <h3>
-                    Upload Your Study Material
-                </h3>
+        <p id="uploadDescription">
+            PDF, DOCX, PPT or image files
+        </p>
 
-                <p>
-                    PDF, DOCX, PPT or image files
-                </p>
 
-                <button
-                    class="primary-btn"
-                    type="button"
-                    id="uploadButton"
-                >
-                    Choose File
-                </button>
+        <!-- FILE INPUT -->
 
-                <input
-                    type="file"
-                    id="fileInput"
-                    hidden
-                    accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png"
-                >
+        <input
+            type="file"
+            id="fileInput"
+            hidden
+            accept=".pdf,.doc,.docx,.ppt,.pptx,.jpg,.jpeg,.png"
+        >
+
+
+        <!-- CHOOSE BUTTON -->
+
+        <button
+            class="primary-btn"
+            type="button"
+            id="uploadButton"
+        >
+            Choose File
+        </button>
+
+
+        <!-- DRAG & DROP MESSAGE -->
+
+        <div
+            class="drop-message"
+            id="dropMessage"
+        >
+            or drag & drop your file here
+        </div>
+
+
+        <!-- SELECTED FILE -->
+
+        <div
+            class="selected-file"
+            id="selectedFile"
+            hidden
+        >
+
+            <div class="file-info">
 
                 <div
-                    class="upload-status"
-                    id="uploadStatus"
+                    class="file-type-icon"
+                    id="fileTypeIcon"
                 >
-                    No file selected
+                    📄
+                </div>
+
+                <div class="file-details">
+
+                    <strong id="fileName">
+                        File name
+                    </strong>
+
+                    <span id="fileSize">
+                        0 KB
+                    </span>
+
                 </div>
 
             </div>
 
-        </section>
+
+            <button
+                type="button"
+                class="remove-file-btn"
+                id="removeFile"
+                title="Remove file"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div
+            class="upload-status"
+            id="uploadStatus"
+        >
+            No file selected
+        </div>
+
+    </div>
+
+</section>
+        
 
 
         <!-- =================================================
